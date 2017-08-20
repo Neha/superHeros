@@ -61,3 +61,17 @@ body{
 #data ul li:last-child{
   border-bottom:1px solid #fff;
 }
+
+.loading{
+  animation: loading 1s ease-in;
+}
+
+@keyframes loading{
+  0%{
+    opacity:0;
+
+  }
+  100%{
+    opacity: 1;
+  }
+}

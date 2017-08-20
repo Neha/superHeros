@@ -9,6 +9,7 @@ var superHeroData = [
   { heroName: "captain America", power: "rich", score: 0, superHero : 'yes' }
 ];
 
+console.log(superHeroData);
 var heroNameList = [],
     superPower,
     heroScoreList = [],
@@ -24,19 +25,24 @@ var isSuperHero = superHeroData.every(function(elm){
         });
      
 for (let i = 0; i < filterBtn.length; i++) {
+  
    filterBtn[i].addEventListener("click", getData)
+   
 }
 
 function getData(){
     let _this = this;
     
+   
     if(isSuperHero){
            heroScoreList = [];
            data.innerHTML = "";
            score.innerHTML = "";
 
     superPower = _this.getAttribute("data-attr");
-    
+      
+   
+   
     //filter
     let flyhero = superHeroData.filter((elm) => {
       return elm.power === superPower;
@@ -52,8 +58,9 @@ function getData(){
         return sum + val;
       });
 
+      
       score.innerHTML = "You scored : " +  scorePlayer;
-      data.innerHTML +='<li>' + elm.heroName + "</li>";
+      data.innerHTML +='<li class="loading">' + elm.heroName + "</li>";
     });
 
     //some
