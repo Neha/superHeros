@@ -3,7 +3,7 @@ body{
  
   color:#fff;
   text-align:center;
-  background-color: blueviolet;
+  background-color: #24C2CB;
  
   
 }
@@ -32,11 +32,32 @@ body{
 }
 
 #data{
-  margin:20px 0 0 0;
+  margin:50px 0 0 0;
   font-size:24px;
 }
 
 #score{
     margin-top:20px;
     font-weight:bold;
+}
+
+
+
+#data ul li{
+  list-style: none;
+  padding:30px 10px;
+  width:500px;
+  border-top:1px solid #fff;
+  background:  rgba(8, 46, 65, 0.5);
+  transition: background 0.5s ease-in;
+  
+
+}
+
+#data ul li:hover{
+  background: linear-gradient( rgba(8, 46, 65, 0.4),rgba(255, 255, 255, 0.0));
+  border-top:1px solid rgba(255, 255, 255, 0.5);
+}
+#data ul li:last-child{
+  border-bottom:1px solid #fff;
 }

@@ -15,7 +15,7 @@ var heroNameList = [],
     scorePlayer;
 
 const filterBtn = document.querySelectorAll("span.filter"),
-      data = document.getElementById("data"),
+      data = document.querySelector("#data ul"),
       score = document.getElementById("score");
 
 //every
@@ -53,7 +53,7 @@ function getData(){
       });
 
       score.innerHTML = "You scored : " +  scorePlayer;
-      data.innerHTML += elm.heroName + "</br>";
+      data.innerHTML +='<li>' + elm.heroName + "</li>";
     });
 
     //some
