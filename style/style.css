@@ -1,9 +1,11 @@
 body{
   font-family:arial;
-  background: #3494e6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #3494e6, #ec6ead); /* Chrome 10-25, Safari 5.1-6 */
+ 
   color:#fff;
   text-align:center;
+  background-color: blueviolet;
+ 
+  
 }
 
 .wrapper{
