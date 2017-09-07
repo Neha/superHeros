@@ -1,15 +1,22 @@
+/*
+Demo for the Functional Programing
+for the JSLovers youtube channel
+Developer : Neha Sharma
+Twitter: @hellonehha
+Year : 2017 
+*/
+
 var superHeroData = [
-  { heroName: "superman", power: "fly", score: 10, superHero : 'yes'  },
-  { heroName: "Batman", power: "rich", score: 0 , superHero : 'yes'},
-  { heroName: "Ironman", power: "rich", score: 0, superHero : 'yes' },
-  { heroName: "wonderwoman", power: "fly", score: 10, superHero : 'yes' },
-  { heroName: "Hulk", power: "anger", score: 5, superHero : 'yes' },
-  { heroName: "Ant", power: "size", score: 20, superHero : 'yes' },
-  { heroName: "Flash", power: "fast", score: 15, superHero : 'yes' },
-  { heroName: "captain America", power: "rich", score: 0, superHero : 'yes' }
+  { heroName: "superman", power: "fly", score: 10, superHero : 'yes' , imageURL : "images/superman.png" },
+  { heroName: "Batman", power: "rich", score: 0 , superHero : 'yes' , imageURL : "images/batman.png"},
+  { heroName: "Ironman", power: "rich", score: 0, superHero : 'yes' , imageURL : "images/ironman.png"},
+  { heroName: "wonderwoman", power: "", score: 10, superHero : 'yes' , imageURL : ""},
+  { heroName: "Hulk", power: "anger", score: 5, superHero : 'yes' , imageURL : "images/hulk.png"},
+  { heroName: "wolverine", power: "size", score: 20, superHero : 'yes' , imageURL : "images/wolverine.png"},
+  { heroName: "Flash", power: "fly", score: 15, superHero : 'yes' , imageURL : "images/flash.png"},
+  { heroName: "captain America", power: "rich", score: 0, superHero : 'yes' , imageURL : "images/captainhero_.png"}
 ];
 
-console.log(superHeroData);
 var heroNameList = [],
     superPower,
     heroScoreList = [],
@@ -34,16 +41,15 @@ function getData(){
     let _this = this;
     
    
-    if(isSuperHero){
+if(isSuperHero){
            heroScoreList = [];
            data.innerHTML = "";
            score.innerHTML = "";
 
-    superPower = _this.getAttribute("data-attr");
+superPower = _this.getAttribute("data-attr");
       
    
-   
-    //filter
+//filter
     let flyhero = superHeroData.filter((elm) => {
       return elm.power === superPower;
     });
@@ -60,7 +66,7 @@ function getData(){
 
       
       score.innerHTML = "You scored : " +  scorePlayer;
-      data.innerHTML +='<li class="loading">' + elm.heroName + "</li>";
+  data.innerHTML += "<li class='loading'><img src=" + elm.imageURL + '>' + '<h2>' + elm.heroName + "</h2></li>";
     });
 
     //some
